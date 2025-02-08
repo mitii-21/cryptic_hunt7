@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherlock Holmes: The Vanishing Manuscript</title>
+    <style>
+        body {
+            background-image: url('wallpaper4.webp'); /* Updated Sherlock Holmes-themed wallpaper */
+            background-size: cover;
+            background-position: center;
+            color: #f8f1e4;
+            font-family: 'Georgia', serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+        }
+        .input-box {
+            padding: 10px;
+            margin: 20px;
+            font-size: 18px;
+            border: 2px solid #c19a6b;
+            background: #2c2c2c;
+            color: white;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background: #c19a6b;
+            color: black;
+            border: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #a67c52;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sherlock Holmes: The Vanishing Manuscript</h1>
+        <p>A priceless manuscript has been stolen from 221B Baker Street! Follow the clues to track down the thief.</p>
+        
+        <!-- Clue 1: Number Puzzle -->
+        <p><strong>Clue 1:</strong> <b>Solve the following number puzzle:</b></p>
+        <p>You are given the following set of numbers:</p>
+        <p>7,7,8,15,5,3</p>   
+        <p>Arrange the numbers in such a way that the sum of the first three numbers equals the sum of the last three numbers,</p>
+        <p>and the difference between the middle two numbers is equal to the sum of the first two.</p>  
+        <p>What is the arrangement of numbers that satisfies these conditions?</p>
+        <p>ANSWER FORMAT(a,b,c,d,e,f)</p>
+        <input type="text" id="answer1" class="input-box" placeholder="Enter your answer">
+        <button class="btn" onclick="checkAnswer1()">Submit</button>
+    </div>
+
+    <script>
+        function checkAnswer1() {
+            let answer = document.getElementById("answer1").value;
+            if (answer == "3,5,7,15,8,7") {
+                window.location.href = "clue2.html";
+            } else {
+                alert("Incorrect! Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
